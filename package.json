@@ -1,0 +1,19 @@
+{
+  "name": "git-soccer",
+  "version": "1.0.0",
+  "description": "git blame game :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syzer/git-soccer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syzer/git-soccer/issues"
+  },
+  "homepage": "https://github.com/syzer/git-soccer#readme"
+}
