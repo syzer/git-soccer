@@ -16,7 +16,9 @@ git clone https://github.com/syzer/git-soccer.git
 cd git-soccer
 npm install
 
-node init
+# To calculate game data:
+npm start
+
 # Need to answer couple questions
 
 # Install `live-server`
