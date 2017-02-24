@@ -1,17 +1,5 @@
 d3.json("game.json", (data) => {
     const { players, name } = data
-    // TODO
-    // 18 + 17 => 100%
-    // x: 805 * players[0].possession / 100 - 128 / 2
-    svg.append('svg:image')
-        .attr({
-            'xlink:href': '../lib/soccer_ball.png',
-            // total width
-            x: 805 * players[0].possession / 100 - 128 / 2,
-            y: 200,
-            width: 128,
-            height: 128
-        })
 
     svg.append("text")
         .attr("x", (width / 2))
@@ -82,5 +70,26 @@ d3.json("game.json", (data) => {
         .style("font-size", "48px")
         .style("font-weight", "bold")
         .text(name)
+
+    // TODO
+    // 18 + 17 => 100%
+    // x: 805 * players[0].possession / 100 - 128 / 2
+    svg.append('svg:image')
+        .attr({
+            'xlink:href': '../lib/soccer_ball.png',
+            // total width
+            x: 805 * players[0].possession / 100 - 128 / 2,
+            y: 200,
+            width: 128,
+            height: 128
+        })
+        // .attr("transform", "rotate(" + 500 + "," + 200 + ")")
+        // .attr({
+        //     transform: "translate(100, 200) rotate(45 200 100)"
+        // })
+    .attr({ id: 'spin' })
+    // .attr("transform", "rotate(180,105,200)")
+    // .attr("transform", "rotate(-40)")
+
 })
 

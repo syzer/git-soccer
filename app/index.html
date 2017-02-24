@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
+    <style>
+        #spin {
+            -webkit-animation: rotation 15s infinite linear;
+            -moz-animation: rotation 15s infinite linear;
+            -webkit-transform-origin: 50% 50%;
+            -o-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -moz-transform-origin: 60% 50%;
+        }
+
+        @-moz-keyframes rotation {
+            0% {
+                -moz-transform: rotate(0deg);
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes rotation {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(359deg);
+            }
+        }
+    </style>
 </head>
 <body>
 <script src="lib/d3.v3.js"></script>
