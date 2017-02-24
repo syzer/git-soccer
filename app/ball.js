@@ -83,13 +83,6 @@ d3.json("game.json", (data) => {
             width: 128,
             height: 128
         })
-        // .attr("transform", "rotate(" + 500 + "," + 200 + ")")
-        // .attr({
-        //     transform: "translate(100, 200) rotate(45 200 100)"
-        // })
-    .attr({ id: 'spin' })
-    // .attr("transform", "rotate(180,105,200)")
-    // .attr("transform", "rotate(-40)")
-
+        .attr({ id: 'spin' })
 })
 
