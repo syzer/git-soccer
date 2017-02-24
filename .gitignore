@@ -59,4 +59,7 @@ typings/
 # dotenv environment variables file
 .env
 
-
+tmp/
+object-stream-tools/
+natural/
+produkte/
