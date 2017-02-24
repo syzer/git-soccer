@@ -15,6 +15,13 @@ I created this game during a train ride to help my friend to use faster git merg
 git clone https://github.com/syzer/git-soccer.git
 cd git-soccer
 npm install
+
+node init
+# Need to answer couple questions
+
+# Install `live-server`
+npm i -g live-server
+live-server ./app
 ```
 
 # Credits
