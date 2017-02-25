@@ -29,3 +29,6 @@ live-server ./app
 # Credits
 
 All assets are taken from random image search.
+
+// TODO remote/game name
+// TODO pick branch inseted inquireing it

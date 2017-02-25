@@ -1,16 +1,29 @@
 const _ = require('lodash')
 const git = require('nodegit')
+const inquirer = require('inquirer')
 const pronunciation = require('natural').SoundEx
-const game = 'object-stream-tools'
-const branch = 'master'
+const game = '.git'
+const branch = 'develop'
 const authors = new Set()
 
-// Open the repository directory.
-git.Repository.open(game)
-// Open the master branch.
-// Open branch, default to master.
-    .then(repo => repo.getBranchCommit(branch))
-    // .then(repo => repo.getMasterCommit())
+inquirer.prompt([{
+    type: 'input',
+    name: 'branch',
+    message: 'Which branch you wanna play on?',
+    default: 'master'
+}, {
+    type: 'input',
+    name: 'gitDir',
+    message: 'Which directory of git to play on?',
+    default: '.git'
+}])
+    .then(({ branch, gitDir }) => ({
+        repo: git.Repository.open(gitDir),
+        branch
+    }))
+    .then(({ branch, repo }) =>
+        // Open branch, default to master.
+        repo.then(repo => repo.getBranchCommit(branch)))
     // Display information about commits on master.
     .then(firstCommit => {
         // Create a new history event emitter.
