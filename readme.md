@@ -1,5 +1,7 @@
 # WAT
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/syzer/git-soccer.svg)](https://greenkeeper.io/)
+
 Navigate to a git repository, and run a game to se who had most HEAD possession.
 
 # Why
