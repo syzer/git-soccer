@@ -71,18 +71,7 @@ d3.json("game.json", (data) => {
         .style("font-weight", "bold")
         .text(name)
 
-    // TODO
-    // 18 + 17 => 100%
-    // x: 805 * players[0].possession / 100 - 128 / 2
-    svg.append('svg:image')
-        .attr({
-            'xlink:href': '../lib/soccer_ball.png',
-            // total width
-            x: 805 * players[0].possession / 100 - 128 / 2,
-            y: 200,
-            width: 128,
-            height: 128
-        })
-        .attr({ id: 'spin' })
+    const ball = document.getElementById("ball")
+    ball.style.marginLeft = `${805 * players[0].possession / 100 - 128 / 2}px`
 })
 
