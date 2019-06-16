@@ -1,8 +1,18 @@
 const Git = require('nodegit')
+const inquirer = require('inquirer')
 
-// Clone a given repository into the `./tmp` folder.
-Git.Clone('https://github.com/kichooo/object-stream-tools', './object-stream-tools')
-    // Look up a specific file within that commit.
-    // .then(commit => commit.getEntry('readme.md'))
-    .then(console.log)
-    .catch(console.error)
+const questions = [
+  {
+    type: 'input',
+    name: 'url',
+    message: 'Let\'s play. What\'s your git url?',
+    default: () =>
+      'https://github.com/kichooo/object-stream-tools'
+  }
+]
+
+inquirer.prompt(questions)
+  .then(({ url }) =>
+    Git.Clone(url, './tmp')
+      .then(console.log)
+      .catch(console.error))
