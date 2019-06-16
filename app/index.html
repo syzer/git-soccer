@@ -2,35 +2,24 @@
 <head>
     <meta charset="utf-8">
     <style>
-        #spin {
-            -webkit-animation: rotation 15s infinite linear;
-            -moz-animation: rotation 15s infinite linear;
-            -webkit-transform-origin: 50% 50%;
-            -o-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-            -moz-transform-origin: 60% 50%;
+        #ball {
+            margin-top: 208px;
+            position: absolute;
+            width: 120px;
+            animation: spinn 5s infinite linear;
         }
-
-        @-moz-keyframes rotation {
-            0% {
-                -moz-transform: rotate(0deg);
-            }
-            100% {
-                -moz-transform: rotate(360deg);
-            }
-        }
-
-        @-webkit-keyframes rotation {
+        @keyframes spinn {
             from {
-                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
             }
             to {
-                -webkit-transform: rotate(359deg);
+                transform: rotate(360deg);
             }
         }
     </style>
 </head>
 <body>
+  <img id="ball" src="lib/soccer_ball.png" alt="">
 <script src="lib/d3.v3.js"></script>
 <script src="field.js"></script>
 <script src="ball.js"></script>
