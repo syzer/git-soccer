@@ -72,6 +72,6 @@ d3.json("game.json", (data) => {
         .text(name)
 
     const ball = document.getElementById("ball")
-    ball.style.marginLeft = `${805 * players[0].possession / 100 - 128 / 2}px`
+    ball.style.marginLeft = `${(805 * players[0].possession / 100 - 128 / 2)+13}px`
 })
 
